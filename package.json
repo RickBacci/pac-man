@@ -21,7 +21,8 @@
     "mocha": "*"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": ""
   },
   "repository": {
     "type": "git",
