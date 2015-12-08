@@ -1,0 +1,30 @@
+{
+  "name": "Pac-man",
+  "version": "1.7.5",
+  "description": "Pac-man game built with javascript",
+  "main": "index.js",
+  "directories": {
+    "test": "test",
+    "lib": "lib",
+    "stylesheets": "stylesheets"
+  },
+  "dependencies": {
+    "npm": "^3.3.9 ",
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  },
+  "devDependencies": {
+    "npm": "^3.3.9 ",
+    "chai": "*",
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rickbacci/pac-man.git"
+  },
+  "author": "Rick Bacci",
+  "license": "ISC"
+}
