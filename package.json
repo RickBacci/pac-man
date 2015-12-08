@@ -1,6 +1,9 @@
 {
   "name": "Pac-man",
   "version": "1.7.5",
+  "engines": {
+      "node": "5.0.0"
+    },
   "description": "Pac-man game built with javascript",
   "main": "index.js",
   "directories": {
