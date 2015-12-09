@@ -1,7 +1,6 @@
 'use strict';
 
 const chai   = require('chai');
-const assert = chai.assert;
 const expect = chai.expect;
 
 const Board  = require('../lib/board');
@@ -9,40 +8,44 @@ const Block  = require('../lib/block');
 
 describe('Board', function(){
 
- it('should instantiate a new board', function(){
-   let board = new Board();
+  context('when created', function(){
+    it('should instantiate a new board', function(){
+      let board = new Board();
 
-   assert.isObject(board);
- });
+      expect(board).to.be.instanceOf(Board)
+    });
 
- it('should have columns based on the first argument', function(){
-   let board = new Board(20);
-   assert.equal(20, board.columns)
- });
+    it('should have columns based on the first argument', function(){
+      let board = new Board(30);
 
- it('should have rows based on the second argument', function(){
-   let board = new Board(20, 20);
-   assert.equal(20, board.rows)
- });
+      expect(board.columns).to.eql(30);
+    });
 
- it('should default to 20 columns', function(){
-   let board = new Board();
+    it('should have rows based on the second argument', function(){
+      let board = new Board(30, 30);
 
-   assert.equal(20, board.columns);
- });
+      expect(board.rows).to.eql(30);
+    });
 
- it('should default to 10 rows', function(){
-   let board = new Board();
+    it('should default to 20 columns', function(){
+      let board = new Board();
 
-   assert.equal(10, board.rows);
+      expect(board.columns).to.eql(20);
+    });
 
- });
+    it('should default to 10 rows', function(){
+      let board = new Board();
 
- it('should start with an empty array of blocks', function(){
-   let board = new Board();
+      expect(board.rows).to.eql(10);
+    });
 
-   assert.isArray(board.blocks);
- });
+    it('should start with an empty array of blocks', function(){
+      let board = new Board();
+
+      expect(board.blocks).to.be.an.array
+    });
+
+  });
 
 
   describe('addBlock', function(){
@@ -51,9 +54,9 @@ describe('Board', function(){
 
       let block = board.addBlock(5,6);
 
-      assert.include(board.blocks, block);
-      assert.equal(block.x, 5);
-      assert.equal(block.y, 6);
+      expect(board.blocks).to.include(block);
+      expect(block.x).to.eql(5);
+      expect(block.y).to.eql(6);
     });
 
   });
