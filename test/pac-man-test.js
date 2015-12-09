@@ -1,9 +1,5 @@
 var Pacman         = require('../lib/pacman.js')
-var handleMovement = require('../lib/handle-movement.js')
 var expect         = require('chai').expect
-  , pacman         = new Pacman(10, 10)
-  // , beverages      = { tea: [ 'chai', 'matcha', 'oolong' ] };
-
 
 
 describe('Pac-man', function(){
