@@ -40,3 +40,48 @@ describe('Block', function(){
 
 });
 
+
+
+describe('Block', function(){
+
+  beforeEach(function() {
+    this.board = new Board();
+    this.block = new Block(this.board, 10, 10);
+
+  });
+
+  it('that is pacman can be created', function(){
+
+    expect(this.block.x).to.equal(10)
+    expect(this.block.y).to.equal(10)
+  });
+
+  it('can move right', function(){
+    this.block.move(1, 0);
+
+    expect(this.block.x).to.eql(11);
+    expect(this.block.y).to.eql(10);
+  });
+
+  it('can move left', function(){
+    this.block.move(-1, 0);
+
+    expect(this.block.x).to.eql(9);
+    expect(this.block.y).to.eql(10);
+  });
+
+  it('can move up', function(){
+    this.block.move(0, -1);
+
+    expect(this.block.x).to.eql(10);
+    expect(this.block.y).to.eql(9);
+  });
+
+  it('can move down', function(){
+    this.block.move(0, 1);
+
+    expect(this.block.x).to.eql(10);
+    expect(this.block.y).to.eql(11);
+  });
+});
+
