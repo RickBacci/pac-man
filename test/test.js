@@ -1,19 +1,10 @@
-var Pacman = require('../lib/pacman.js')
-var expect = require('chai').expect
-  , foo = 'bar'
-  , beverages = { tea: [ 'chai', 'matcha', 'oolong' ] };
+var Pacman         = require('../lib/pacman.js')
+var handleMovement = require('../lib/handle-movement.js')
+var expect         = require('chai').expect
+  , pacman         = new Pacman(10, 10)
+  // , beverages      = { tea: [ 'chai', 'matcha', 'oolong' ] };
 
-describe('Testing', function() {
-  it('should work', function () {
 
-    expect(foo).to.be.a('string');
-    expect(foo).to.equal('bar');
-    expect(foo).to.have.length(3);
-    expect(beverages).to.have.property('tea').with.length(3);
-
-  });
-
-});
 
 describe('Pac-man', function(){
   it('can exist', function(){
@@ -24,14 +15,42 @@ describe('Pac-man', function(){
     expect(pacman.y).to.equal(10)
   });
 
-  it('can move to the right', function(){
+  it('can move right', function(){
     var pacman = new Pacman(10, 10)
+
+    pacman.move(1, 0);
 
     expect(pacman.x).to.eql(11);
     expect(pacman.y).to.eql(10);
   });
+
+  it('can move left', function(){
+    var pacman = new Pacman(10, 10)
+
+    pacman.move(-1, 0);
+
+    expect(pacman.x).to.eql(9);
+    expect(pacman.y).to.eql(10);
+  });
+
+  it('can move up', function(){
+    var pacman = new Pacman(10, 10)
+
+    pacman.move(0, -1);
+
+    expect(pacman.x).to.eql(10);
+    expect(pacman.y).to.eql(9);
+  });
+
+  it('can move down', function(){
+    var pacman = new Pacman(10, 10)
+
+    pacman.move(0, 1);
+
+    expect(pacman.x).to.eql(10);
+    expect(pacman.y).to.eql(11);
+  });
+
 });
-
-
 
 
