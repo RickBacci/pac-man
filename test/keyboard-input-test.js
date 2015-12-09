@@ -11,10 +11,10 @@ var Pacman         = require('../lib/pacman.js')
 var handleMovement = require('../lib/handle-movement.js')
 
 var expect         = require('chai').expect
-  , pacman    = new Pacman(10, 10)
+  , pacman         = new Pacman(10, 10)
 
 
-  describe('Pacman', function() {
+  describe('Pac-man', function() {
     describe('moves', function(){
 
       beforeEach(function() {
@@ -23,6 +23,7 @@ var expect         = require('chai').expect
 
 
       it("left when the 'j' key is pressed." , function () {
+
         // function leftKeyWasPressed
 
       });
