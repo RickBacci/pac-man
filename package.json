@@ -1,33 +1,39 @@
 {
   "name": "Pac-man",
   "version": "1.7.5",
-  "engines": {
-      "node": "5.0.0"
-    },
-  "description": "Pac-man game built with javascript",
+  "description": "Pac-man for Game Time project a Turing school of software & design.",
   "main": "index.js",
-  "directories": {
-    "test": "test",
-    "lib": "lib",
-    "stylesheets": "stylesheets"
-  },
-  "dependencies": {
-    "npm": "^3.3.9 ",
-    "chai": "^3.4.1",
-    "mocha": "^2.3.4"
-  },
-  "devDependencies": {
-    "chai": "*",
-    "mocha": "*"
-  },
   "scripts": {
-    "test": "mocha",
-    "start": ""
+    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "build": "./node_modules/webpack/bin/webpack.js",
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel/register"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rickbacci/pac-man.git"
+    "url": "https://github.com/RickBacci/pac-man.git"
   },
   "author": "Rick Bacci",
-  "license": "ISC"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RickBacci/pac-man/issues"
+  },
+  "homepage": "http://rickbacci.github.io/pac-man/",
+  "devDependencies": {
+    "babel": "^5.8.3",
+    "babel-core": "^5.7.4",
+    "babel-loader": "^5.3.2",
+    "chai": "^3.2.0",
+    "css-loader": "^0.15.5",
+    "mocha": "^2.2.5",
+    "mocha-loader": "^0.7.1",
+    "node-libs-browser": "^0.5.2",
+    "node-sass": "^3.2.0",
+    "sass-loader": "^1.0.2",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.10.1",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4"
+  }
 }
