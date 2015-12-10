@@ -12,9 +12,9 @@ describe('Pac-man block', function(){
   context('that collides with a wall', function(){
 
     beforeEach(function() {
-      this.board = new Board();
-      this.pacman = new Block(this.board, 10, 10, 'pacman');
-      this.wall = new Block(this.board, 10, 10, 'wall');
+      this.board  = new Board();
+      this.pacman = new Block(10, 10, 'pacman', this.board);
+      this.wall   = new Block(10, 10, 'wall', this.board);
 
     });
 
@@ -35,8 +35,9 @@ describe('Pac-man block', function(){
   context('that collides with a ghost', function(){
 
     beforeEach(function() {
-      this.board = new Board();
-      this.block = new Block(this.board, 10, 10);
+      this.board  = new Board();
+      this.pacman = new Block(10, 10, 'pacman', this.board);
+      this.wall   = new Block(10, 10, 'ghost', this.board);
 
     });
 

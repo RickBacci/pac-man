@@ -13,7 +13,7 @@ describe('Block', function(){
 
     beforeEach(function() {
       this.board = new Board();
-      this.block = new Block(this.board, 10, 10);
+      this.block = new Block(10, 10, 'pacman', this.board);
 
     });
 
@@ -52,28 +52,29 @@ describe('Block', function(){
 
     beforeEach(function() {
       this.board = new Board();
+      this.block = new Block(10, 10, 'pacman', this.board);
     });
 
     it('should have a refererence to the board', function(){
-      let block = new Block(this.board);
+      let block = new Block(10, 10, 'pacman', this.board);
 
       expect(block.board).to.eql(this.board);
     });
 
     it('should have an X-coordinate', function(){
-      let block = new Block(this.board, 0);
+      let block = new Block(10, 10, 'pacman', this.board);
 
-      expect(block.x).to.deep.eql(0);
+      expect(block.x).to.deep.eql(10);
     });
 
     it('should have an Y-coordinate', function(){
-      let block = new Block(this.board, 0, 0);
+      let block = new Block(10, 10, 'pacman', this.board);
 
-      expect(block.y).to.deep.eql(0);
+      expect(block.y).to.deep.eql(10);
     });
 
     it('should be included in the board\'s array of blocks', function(){
-      let block = new Block(this.board, 0, 0);
+      let block = new Block(10, 10, 'pacman', this.board);
 
       expect(this.board.blocks).to.include(block);
     });
