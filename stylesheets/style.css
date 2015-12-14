@@ -1,27 +1,22 @@
-/* .canvas { */
-/*   border: 1px dashed; */
-/*   margin: auto; */
-/*   display: block; */
-/* } */
+body {
+  background: black;
+}
 
+.background {
+  background: black;
+  table-layout: fixed;
+  border-spacing: 0;
+}
 
+.background td {
+  padding: 0;
+}
 
-.background    { background: black;
-                 table-layout: fixed;
-                 border-spacing: 0;              }
-
-.background td { padding: 0;                     }
-
-.wall          { background: blue;              }
-
+.wall   { background: blue;              }
 .actor  { position: absolute;            }
-.coin   { background: rgb(241, 229, 89); }
+.pellet { background: rgb(241, 229, 89); }
+.ghost  { background: red;               }
+.player { background: yellow;            }
 
-.player { background: yellow; }
-
-.lost .player {
-  background: rgb(160, 64, 64);
-}
-.won .player {
-  box-shadow: -4px -7px 8px white, 4px -7px 8px white;
-}
+.lost .player { background: rgb(160, 64, 64); }
+.won  .player { box-shadow: -4px -7px 8px white, 4px -7px 8px white; }
