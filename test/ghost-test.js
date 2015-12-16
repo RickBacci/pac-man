@@ -42,26 +42,6 @@ describe('Ghost', function(){
 
   });
 
-  context('can move', function(){
-
-    beforeEach(function() {
-      this.ghost = new Ghost(new Vector(20, 20), 'red', 65, this.level);
-    });
-
-
-    it('to the right', function(){
-      this.ghost = new Ghost(new Vector(20, 20), 'red', 65, this.level);
-
-      this.ghost.act(new Vector(1, 0), this.level);
-
-
-      this.ghost.act(1, 0);
-
-
-      expect(this.block.x).to.eql(11);
-      expect(this.block.y).to.eql(10);
-    });
-  });
 
 });
 
