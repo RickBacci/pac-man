@@ -1,11 +1,21 @@
 body {
-  /* background: black; */
+  background: black;
+  padding-top: 5%;
 }
 
-
-canvas {
-  /* padding-top: 5%; */
-  /* padding-left: 30%; */
-
+#landing {
+  width: auto%;
+  margin: 0 auto;
 }
 
+#inner-landing {
+  padding-left: 5
+    width: auto;
+    margin: 0 auto;
+}
+
+#inner {
+    width: 65%;
+    margin: 0 auto;
+    color: white;
+}
