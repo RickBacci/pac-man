@@ -31,7 +31,8 @@ describe('Level', function(){
   context('when created', function(){
 
     it('should instantiate a new level', function(){
-      let plan  = GAME_LEVELS[0];
+      // let plan  = GAME_LEVELS[0];
+      let plan = [['00000', '00000', '00000']];
       let level = new Level(plan);
       level.generate(plan);
 
@@ -39,11 +40,11 @@ describe('Level', function(){
     });
 
     it('should have a width', function(){
-      let plan  = GAME_LEVELS[0];
-      let level = new Level(plan);
+      let plan = [['00000', '00000', '00000'],['0']];
+      let level = new Level(plan[0]);
       level.generate();
 
-       expect(level.width).to.eql(28);
+       expect(level.width).to.eql(5);
      });
 
     it('should have a height', function(){

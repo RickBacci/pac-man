@@ -22,10 +22,10 @@ describe('Ghost', function(){
       expect(this.ghost).to.be.instanceOf(Ghost);
     });
 
-    it('should have a refererence to the level', function(){
-      this.level.generate();
+    it('should have 4 ghosts per level', function(){
+      this.level.addGhosts();
 
-      expect(this.ghost.level).to.eql(this.level);
+      expect(this.level.actors.length).to.eql(4);
     });
 
     it('should have an X-coordinate', function(){

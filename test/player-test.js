@@ -19,13 +19,13 @@ describe('Player', function() {
     it('with an X coordinate', function(){
       let player = new Player(new Vector(5, 10));
 
-      expect(player.size.x).to.eql(0.7);
+      expect(player.size.x).to.eql(0.8);
     });
 
     it('with a Y coordinate', function(){
       let player = new Player(new Vector(5, 10));
 
-      expect(player.size.y).to.eql(0.7);
+      expect(player.size.y).to.eql(0.8);
     });
 
 
