@@ -14,10 +14,6 @@ describe('PowerPellet', function(){
     expect(powerPellet.type).to.eql('powerPellet');
   });
 
-  xit('has an action', function(){
-    // can of whoop-ass
-  });
-
   context('has a Vector position', function() {
 
     it('with an X coordinate', function(){
