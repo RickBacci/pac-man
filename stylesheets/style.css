@@ -9,13 +9,37 @@ body {
 }
 
 #inner-landing {
+  height: 15px;
   padding-left: 5
-    width: auto;
-    margin: 0 auto;
+  width: auto;
+  margin: 0 auto;
 }
 
 #inner {
-    width: 65%;
-    margin: 0 auto;
-    color: white;
+  width: 65%;
+  margin: 0 auto;
+  color: white;
+}
+
+
+#get-ready {
+  margin-left: 90px;
+  float: center;
+  color: red;
+}
+
+#player-lives {
+  color: white;
+  float: left;
+}
+
+#player-score {
+  color: white;
+  float: right;
+  padding-right: 8%;
+}
+
+#dash {
+  width: 60%;
+  margin: 0 auto;
 }
